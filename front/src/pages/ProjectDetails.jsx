@@ -18,7 +18,7 @@ function ProjectDetail() {
           return;
         }
 
-        const { data } = await axios.get(`https://management-system-ochre.vercel.app/api/projects/${id}`, {
+        const { data } = await axios.get(`https://manikchada-mernstack-appback-of7dgxt4n-rohits-projects-a5c6d24a.vercel.app/api/projects/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         setProject(data);
@@ -36,7 +36,7 @@ function ProjectDetail() {
     e.preventDefault();
     try {
       const token = localStorage.getItem('token');
-      const { data } = await axios.post(`https://management-system-ochre.vercel.app/projects/${id}/tasks`, newTask, {
+      const { data } = await axios.post(`https://manikchada-mernstack-appback-of7dgxt4n-rohits-projects-a5c6d24a.vercel.app/projects/${id}/tasks`, newTask, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setProject({ ...project, tasks: [...project.tasks, data] });
