@@ -11,7 +11,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { data } = await axios.post('https://management-system-ochre.vercel.app/api/auth/login', { email, password });
+      const { data } = await axios.post('https://manikchada-mernstack-appback-of7dgxt4n-rohits-projects-a5c6d24a.vercel.app/api/auth/login', { email, password });
       localStorage.setItem('token', data.token);
       navigate('/');
     } catch (err) {
